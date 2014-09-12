@@ -1,7 +1,7 @@
 bpmonlinejs
 ===========
 
-## connect
+## constructor
 ```js
 var bpmonline = require('bpmonline');
 
@@ -11,7 +11,10 @@ var bpm = new bpmonline({
     	application: "ApplicationName", //Default '/'
     	isSecure: false //HTTP or HTTPS. Default: HTTP(false)
 });
+```
 
+## connect
+```js
 bpm.connect({login: "Supervisor", password: "Supervisor"}, function(err, res) {
 	if (err) {
 		console.log(err);
