@@ -13,7 +13,7 @@ var bpm = new bpmonline({
 });
 ```
 
-## connect
+## Метод: connect
 ```js
 bpm.connect({login: "Supervisor", password: "Supervisor"}, function(err, res) {
 	if (err) {
