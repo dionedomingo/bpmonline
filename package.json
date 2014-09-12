@@ -1,0 +1,23 @@
+{
+  "name": "bpmonline",
+  "version": "0.0.0",
+  "description": "bpmonlinejs api. Auth, Run Process",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/egenov/bpmonlinejs.git"
+  },
+  "keywords": [
+    "bpmonline",
+    "terrasoft"
+  ],
+  "author": "E.Genov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/egenov/bpmonlinejs/issues"
+  },
+  "homepage": "https://github.com/egenov/bpmonlinejs"
+}
