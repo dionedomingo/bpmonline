@@ -1,6 +1,6 @@
 {
   "name": "bpmonline",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "bpmonlinejs api. Auth, Run Process",
   "main": "./index.js",
   "scripts": {
