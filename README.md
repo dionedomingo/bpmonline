@@ -8,7 +8,7 @@ var bpmonline = require('bpmonline');
 var bpm = new bpmonline({
 	host: "HOST", //Example: EXAMPLE.COM
     	port: 80, //Default: isSecure ? 443 : 80
-    	application: "ApplicationName", //Default '/'
+    	path: "/", //Default '/'
     	isSecure: false //HTTP or HTTPS. Default: HTTP(false)
 });
 ```
