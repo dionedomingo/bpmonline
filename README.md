@@ -1,4 +1,4 @@
-bpmonline
+bpmonline. node.js module
 ===========
 
 ## constructor
