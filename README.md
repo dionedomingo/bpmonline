@@ -1,6 +1,6 @@
 bpmonline. node.js module
 ===========
-
+bpmonline is an extensible for [node](http://nodejs.org).Module contains api for [bpm'online](http://www.bpmonline.com/) 7.x solution
 ## constructor
 ```js
 var bpmonline = require('bpmonline');
