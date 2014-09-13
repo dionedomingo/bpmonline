@@ -1,14 +1,14 @@
 {
   "name": "bpmonline",
-  "version": "0.0.3",
-  "description": "bpmonlinejs api. Auth, Run Process",
+  "version": "0.0.0",
+  "description": "bpmonline nodejs api",
   "main": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/egenov/bpmonlinejs.git"
+    "url": "https://github.com/egenov/bpmonline.git"
   },
   "keywords": [
     "bpmonline",
@@ -20,7 +20,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/egenov/bpmonlinejs/issues"
+    "url": "https://github.com/egenov/bpmonline/issues"
   },
-  "homepage": "https://github.com/egenov/bpmonlinejs"
+  "homepage": "https://github.com/egenov/bpmonline"
 }
