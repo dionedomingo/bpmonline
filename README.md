@@ -1,4 +1,4 @@
-bpmonlinejs
+bpmonline
 ===========
 
 ## constructor
