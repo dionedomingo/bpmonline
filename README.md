@@ -1,6 +1,6 @@
 bpmonline. node.js module
 ===========
-bpmonline is an extensible for [node](http://nodejs.org).Module contains api for [bpm'online](http://www.bpmonline.com/) 7.x solution
+bpmonline is an extensible for [node](http://nodejs.org). Module contains api for [bpm'online](http://www.bpmonline.com/) 7.x solution
 ## constructor
 ```js
 var bpmonline = require('bpmonline');
@@ -10,18 +10,48 @@ var bpm = new bpmonline({
 });
 ```
 
-## Example: connect
-connect - authorization function. The function returns authorization cookies
+## Documentation
+
+### Methods
+
+* [`connect`](#connect)
+* [`runProcess`](#runProcess)
+* [`throwProcessSignal`](#throwProcessSignal)
+
+<a name="connect" />
+### connect(connectInfo, callback)
+
+Authorization function. The function returns authorization cookies.
+
+__Arguments__
+
+* *`connectInfo` - Json object with connect properties.
+* `callback(err, res)` - A callback which is called when function complete, or an error occurs.
+
+__Examples__
 ```js
 bpm.connect({login: "Supervisor", password: "Supervisor"}, function(err, res) {
 	if (err) {
 		console.log(err);
+	} else {
+		var cookies = res; //Authorized Cookies
 	}
 });
 ```
 
-## Example: runProcess
-runProcess - function, that run business process in bpm'online. 
+<a name="runProcess" />
+### runProcess(processName, args, cookies, callback)
+
+Function, that run business process in bpm'online.
+
+__Arguments__
+
+* *`processName` - Name of bpm`online process that must be run.
+* `args` - Process arguments(Json object).
+* `cookies` - Cookie container from [`connect`](#connect) response. Optional when first call [`connect`](#connect) method
+* `callback(err, res)` - A callback which is called when function complete, or an error occurs.
+ 
+__Examples__
 ```js
 //cookies get from connect and using in runProcess
 bpm.connect({login: "Supervisor", password: "Supervisor"}, function(err, res) {
@@ -30,7 +60,11 @@ bpm.connect({login: "Supervisor", password: "Supervisor"}, function(err, res) {
 	    Param2: "world",
 	    ResultParameterName: "Out1"},
     null, function(err, res) {
-        //TODO
+       	if (err) {
+		console.log(err);
+	} else {
+		var bpmXmlResponse = res; //process response 
+	}
     });
 });
 
@@ -39,17 +73,35 @@ var cookies = {}; //take from connect method
 
 bpm.runProcess("ProcessName", {Param1: "Hello,", Param2: "world", ResultParameterName: "Out1"},
     cookies, function(err, res) {
-    //TODO
+       	if (err) {
+		console.log(err);
+	} else {
+		var bpmXmlResponse = res; //process response 
+	}
 });
 ```
 
-## Example: throwProcessSignal
-throwProcessSignal - function, that run business process in bpm'online by signal. 
+<a name="throwProcessSignal" />
+### throwProcessSignal(signalName, cookies, callback)
+
+Function, that run business process in bpm'online by signal. 
+
+__Arguments__
+
+* *`signalName` - Тame of the bpm`online signal that runs the processes.
+* `cookies` - Cookie container from [`connect`](#connect) response. Optional when first call [`connect`](#connect) method
+* `callback(err, res)` - A callback which is called when function complete, or an error occurs.
+ 
+__Examples__
 ```js
 //cookies get from connect and using in throwProcessSignal
 bpm.connect({login: "Supervisor", password: "Supervisor"}, function(err, res) {
     bpm.throwProcessSignal("SignalName", null, function(err, res) {
-        //TODO
+        if (err) {
+		console.log(err);
+	} else {
+		var bpmXmlResponse = res; //process response 
+	}
     });
 });
 
@@ -57,6 +109,10 @@ bpm.connect({login: "Supervisor", password: "Supervisor"}, function(err, res) {
 var cookies = {}; //take from connect method
 
 bpm.throwProcessSignal("SignalName", cookies, function(err, res) {
-    //TODO
+        if (err) {
+		console.log(err);
+	} else {
+		var bpmXmlResponse = res; //process response 
+	}
 });
 ```
