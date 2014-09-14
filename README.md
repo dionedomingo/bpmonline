@@ -53,7 +53,7 @@ bpm.connect({login: "Supervisor", password: "Supervisor"}, function(err, res) {
     });
 });
 
-//runProcess with cookies from store
+//throwProcessSignal with cookies from store
 var cookies = {}; //take from connect method
 
 bpm.throwProcessSignal("SignalName", cookies, function(err, res) {
