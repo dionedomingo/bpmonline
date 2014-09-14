@@ -1,7 +1,7 @@
 {
   "name": "bpmonline",
   "version": "0.3.0",
-  "description": "bpmonline nodejs api",
+  "description": "bpmonline api for nodejs",
   "main": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
