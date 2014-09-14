@@ -1,6 +1,6 @@
 {
   "name": "bpmonline",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "bpmonline api for nodejs",
   "main": "./index.js",
   "scripts": {
