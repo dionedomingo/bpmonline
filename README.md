@@ -110,7 +110,7 @@ bpm.connect({login: "Supervisor", password: "Supervisor"}, function(err, res) {
 var cookies = {}; //take from connect method
 
 bpm.throwProcessSignal("SignalName", cookies, function(err, res) {
-        if (err) {
+	if (err) {
 		console.log(err);
 	} else {
 		var bpmXmlResponse = res; //process response 
